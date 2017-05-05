@@ -112,6 +112,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
 @property (weak, nonatomic) IBOutlet JSQMessagesCollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet JSQMessagesInputToolbar *inputToolbar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopSpace;
 
 @property (nonatomic) NSLayoutConstraint *toolbarHeightConstraint;
 
