@@ -40,6 +40,12 @@
 @property (weak, nonatomic, readonly) JSQMessagesCollectionView *collectionView;
 
 /**
+ *  Extra space to insert view above collectionView
+ *
+ */
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopSpace;
+
+/**
  *  Returns the input toolbar view object managed by this view controller.
  *  This view controller is the toolbar's delegate.
  */
