@@ -95,11 +95,10 @@
                               atIndexPath:(NSIndexPath *)indexPath
                                withLayout:(JSQMessagesCollectionViewFlowLayout *)layout
 {
-    // Uncomment this to use cache for bubble size
-//    NSValue *cachedSize = [self.cache objectForKey:@([messageData messageHash])];
-//    if (cachedSize != nil) {
-//        return [cachedSize CGSizeValue];
-//    }
+    NSValue *cachedSize = [self.cache objectForKey:@([messageData messageHash])];
+    if (cachedSize != nil && ![messageData isMediaMessage]) {
+        return [cachedSize CGSizeValue];
+    }
 
     CGSize finalSize = CGSizeZero;
 
